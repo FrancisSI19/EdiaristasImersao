@@ -9,7 +9,7 @@ class Servico(models.Model):
         ('twf-cleaning-3', 'twf-cleaning-3'),
     )
     nome = models.CharField(max_length=50, null=False, blank=False)
-    valor_minino = models.DecimalField(null=False, blank=False, decimal_places=2, max_digits=5)
+    valor_minimo = models.DecimalField(null=False, blank=False, decimal_places=2, max_digits=5)
     qtd_horas = models.IntegerField(null=False, blank=False)
     porcentagem_comissao = models.DecimalField(null=False, blank=False, decimal_places=2, max_digits=5)
     horas_quarto = models.IntegerField(null=False, blank=False)
