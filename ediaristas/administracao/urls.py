@@ -8,4 +8,5 @@ urlpatterns = [
     path('servicos/editar/<int:id>', editar_servico, name='editar_servico'),
     path('usuarios/cadastrar', cadastrar_usuario, name='cadastrar_usuario'),
     path('usuarios/listar', listar_usuarios, name='listar_usuarios'),
+    path('usuarios/editar/<int:id>', editar_usuarios, name='editar_usuario'),
 ]
