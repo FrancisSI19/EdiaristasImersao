@@ -12,15 +12,20 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+    
 """
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
-from rest_framework_simplejwt.views import TokenObtainPairView
+from api.views import logout_view
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('administracao/', include('administracao.urls')),
     path('api/', include('api.urls')),
-    path('auth/token', TokenObtainPairView.as_view(), name='token_obtain_pair')
+    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('auth/logout/', logout_view.Logout.as_view(), name='logout-list')
+    
 ]

@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (diaristas_localidade_views, endereco_cep_views,
                     disponibilidade_atendimento_cidade,
-                    servico_view, inicio_view, usuario_view)
+                    servico_view, inicio_view, usuario_view, me_view, diaria_view)
 
 
 urlpatterns = [
@@ -20,5 +20,9 @@ urlpatterns = [
     path('', inicio_view.Inicio.as_view(), name='inicio'),
 
     path('usuarios', usuario_view.Usuario.as_view(), name='usuario-list'),
+
+    path('me', me_view.Me.as_view(), name="me-list"),
+
+    path('diarias', diaria_view.Diaria.as_view(), name='diaria-list'),
 
 ]
