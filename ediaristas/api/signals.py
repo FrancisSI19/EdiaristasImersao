@@ -7,9 +7,9 @@ def usuario_cadastrado(sender, instance, created, **kwargs):
     if created:
         assunto = 'Cadastro realizado com sucesso'
         corpo_email = ''
-        email_destino = [instance.mail, ]
+        email_destino = [instance.email, ]
         email_remetente = 'frantauan19@gmail.com'
-        mensagem_html = render_to_string('email_cadastrado.html', {'usuario': instance})
+        mensagem_html = render_to_string('email_cadastro.html', {'usuario': instance})
         send_mail(assunto, corpo_email, email_remetente, email_destino,
         html_message=mensagem_html)
 

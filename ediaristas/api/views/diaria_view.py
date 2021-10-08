@@ -16,4 +16,4 @@ class Diaria(APIView):
         if serializer_diaria.is_valid():
             serializer_diaria.save()
             return Response(serializer_diaria.data, status=status_http.HTTP_201_CREATED)
-        return Response(serializer_diaria.errors, status=status_http.HTTP_400_BAD_REQUEST)
+        return Response(serializer_diaria.errors, status=status_http.HTTP_400_BAD_REQUEST)  

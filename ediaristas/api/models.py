@@ -63,7 +63,7 @@ class Diaria(models.Model):
             (6, "AVALIADO"),
             (7, "TRANSFERIDO")
         )
-
+        
         data_atendimento = models.DateTimeField(null=False, blank=False)
         tempo_atendimento = models.IntegerField(null=False, blank=False)
         status = models.IntegerField(null=False, blank=False, choices=STATUS_DIARIA_CHOICES,
